@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.src = src;
         el.controls = true;
         el.autoplay = true;
+        el.muted = true; // arranca silenciado; el usuario activa el sonido con los controles si quiere
       } else {
         el = document.createElement('img');
         el.src = src;
