@@ -512,15 +512,15 @@ footer{
 footer p{ color:var(--text-dim); font-size:0.82rem; font-family:var(--f-mono); }
 
 /* ------------------------- SIGNAL CARD (wave visualizer) --------------------- */
-#signal{ border-bottom:1px solid var(--line); }
 .signal-wrap{
   display:flex;
   justify-content:center;
+  margin-top:36px;
 }
 .signal-card{
   position:relative;
   width:100%;
-  max-width:380px;
+  max-width:340px;
   border-radius:16px;
   overflow:hidden;
   border:1px solid var(--line);
@@ -530,12 +530,12 @@ footer p{ color:var(--text-dim); font-size:0.82rem; font-family:var(--f-mono); }
 }
 @keyframes signalFloat{
   0%, 100%{ transform:translateY(0); }
-  50%{ transform:translateY(-10px); }
+  50%{ transform:translateY(-8px); }
 }
 .signal-canvas-wrap{
   position:relative;
-  height:200px;
-  margin:16px;
+  height:120px;
+  margin:14px;
   border-radius:12px;
   overflow:hidden;
   border:1px solid var(--line);
@@ -556,32 +556,36 @@ footer p{ color:var(--text-dim); font-size:0.82rem; font-family:var(--f-mono); }
   height:1px;
   background:linear-gradient(90deg, transparent, var(--line), transparent);
 }
-.signal-body{ padding:18px 20px 20px; }
+.signal-body{ padding:14px 18px 16px; text-align:left; }
 .signal-badge{
   display:inline-block;
-  padding:5px 12px;
+  padding:4px 11px;
   border-radius:99px;
   border:1px solid rgba(56,225,224,0.35);
   background:rgba(56,225,224,0.08);
   color:var(--cyan);
   font-family:var(--f-mono);
-  font-size:0.68rem;
+  font-size:0.65rem;
   letter-spacing:0.08em;
   text-transform:uppercase;
-  margin-bottom:14px;
+  margin-bottom:10px;
 }
 .signal-body h4{
   font-family:var(--f-display);
-  font-size:1.3rem;
+  font-size:1.1rem;
   text-transform:uppercase;
   color:var(--text);
-  margin-bottom:8px;
+  margin-bottom:6px;
 }
 .signal-body p{
   color:var(--text-muted);
-  font-size:0.85rem;
-  line-height:1.6;
-  margin-bottom:18px;
+  font-size:0.8rem;
+  line-height:1.5;
+  margin-bottom:14px;
+}
+@media (max-height:800px){
+  .signal-body p{ display:none; }
+  .signal-canvas-wrap{ height:90px; margin:10px; }
 }
 .signal-footer{
   display:flex; justify-content:space-between; align-items:center;
