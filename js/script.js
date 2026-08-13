@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let x = 0; x < signalCanvas.width; x++){
           const nx = (x / signalCanvas.width) * 2 - 1;
           const px = nx + i * 0.05 + freq * 0.03;
-          const py = Math.sin(px * 10 + time) * Math.cos(px * 2) * freq * 0.12 * ((i + 1) / 6);
+          const py = Math.sin(px * 10 + time) * Math.cos(px * 2) * freq * 0.08 * ((i + 1) / 6);
           const y = (py + 1) * signalCanvas.height / 2;
           x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
         }
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let signalRunning = true;
     function animateSignal(){
       if (!signalRunning) return;
-      time += 0.02;
+      time += 0.012;
       updateWaveData();
       drawSignal();
       requestAnimationFrame(animateSignal);
